@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BuildNumbersInAzurePipelineArtifactsExample</name>
+    </assembly>
+    <members>
+        <member name="P:BuildNumbersInAzurePipelineArtifactsExample.AssemblyInformation.AssemblyName">
+            <summary>
+            The assembly name.
+            </summary>
+        </member>
+        <member name="P:BuildNumbersInAzurePipelineArtifactsExample.AssemblyInformation.AssemblyInformationalVersion">
+            <summary>
+            The assembly informational version.
+            </summary>
+        </member>
+        <member name="P:BuildNumbersInAzurePipelineArtifactsExample.AssemblyInformation.AzureBuildNumber">
+            <summary>
+            Returns the Azure build number.
+            </summary>
+            <remarks>
+            For the actual Azure build number to be displayed the following PowerShell task must be placed in the 
+            azure-pipelines.yml file before the DotNetCoreCLI@2 build task.
+            
+            # Replace AzureBuildNumber.txt content with actual build number.
+            - task: PowerShell@2
+              inputs:
+                targetType: 'inline'
+                script: |
+                  New-Item $(Build.SourcesDirectory)/BuildNumbersInAzurePipelineArtifactsExample/AzureBuildNumber.txt -Force
+                  Set-Content $(Build.SourcesDirectory)/BuildNumbersInAzurePipelineArtifactsExample/AzureBuildNumber.txt '$(Build.BuildNumber)' 
+            </remarks>
+        </member>
+        <member name="M:BuildNumbersInAzurePipelineArtifactsExample.AssemblyInformation.InformationObject">
+            <summary>
+            Returns the assembly information.
+            </summary>
+            <returns>The assembly information object.</returns>
+        </member>
+        <member name="M:BuildNumbersInAzurePipelineArtifactsExample.Controllers.BuildNumberDemoController.#ctor(Microsoft.Extensions.Logging.ILogger{BuildNumbersInAzurePipelineArtifactsExample.Controllers.BuildNumberDemoController},Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Build Number Demo constructor.
+            </summary>
+            <param name="logger">A generic interface for logging where the category name is derived from the specified TCategoryName type name used to enable activation of a named ILogger from dependency injection.</param>
+            <param name="configuration">Represents a set of key/value application configuration properties.</param>
+        </member>
+        <member name="M:BuildNumbersInAzurePipelineArtifactsExample.Controllers.BuildNumberDemoController.ApiInformation">
+            <summary>
+            Returns API information.
+            </summary>
+            <returns>API information.</returns>
+            <response code="200">Returns API information.</response>
+            <remarks>
+            This API call should be included as the default in all APIs.
+            </remarks>
+        </member>
+        <member name="M:BuildNumbersInAzurePipelineArtifactsExample.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:BuildNumbersInAzurePipelineArtifactsExample.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BuildNumbersInAzurePipelineArtifactsExample.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:BuildNumbersInAzurePipelineArtifactsExample.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:BuildNumbersInAzurePipelineArtifactsExample.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>
