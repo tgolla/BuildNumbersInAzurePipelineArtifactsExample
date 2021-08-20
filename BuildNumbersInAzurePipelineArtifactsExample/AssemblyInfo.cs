@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BuildNumbersInAzurePipelineArtifactsExample
 {
-    public static class AssemblyInformation
+    public static class AssemblyInfo
     {
         /// <summary>
         /// The assembly name.

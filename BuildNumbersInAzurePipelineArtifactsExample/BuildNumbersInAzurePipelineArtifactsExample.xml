@@ -4,17 +4,17 @@
         <name>BuildNumbersInAzurePipelineArtifactsExample</name>
     </assembly>
     <members>
-        <member name="P:BuildNumbersInAzurePipelineArtifactsExample.AssemblyInformation.AssemblyName">
+        <member name="P:BuildNumbersInAzurePipelineArtifactsExample.AssemblyInfo.AssemblyName">
             <summary>
             The assembly name.
             </summary>
         </member>
-        <member name="P:BuildNumbersInAzurePipelineArtifactsExample.AssemblyInformation.AssemblyInformationalVersion">
+        <member name="P:BuildNumbersInAzurePipelineArtifactsExample.AssemblyInfo.AssemblyInformationalVersion">
             <summary>
             The assembly informational version.
             </summary>
         </member>
-        <member name="P:BuildNumbersInAzurePipelineArtifactsExample.AssemblyInformation.AzureBuildNumber">
+        <member name="P:BuildNumbersInAzurePipelineArtifactsExample.AssemblyInfo.AzureBuildNumber">
             <summary>
             Returns the Azure build number.
             </summary>
@@ -31,7 +31,7 @@
                   Set-Content $(Build.SourcesDirectory)/BuildNumbersInAzurePipelineArtifactsExample/AzureBuildNumber.txt '$(Build.BuildNumber)' 
             </remarks>
         </member>
-        <member name="M:BuildNumbersInAzurePipelineArtifactsExample.AssemblyInformation.InformationObject">
+        <member name="M:BuildNumbersInAzurePipelineArtifactsExample.AssemblyInfo.InformationObject">
             <summary>
             Returns the assembly information.
             </summary>

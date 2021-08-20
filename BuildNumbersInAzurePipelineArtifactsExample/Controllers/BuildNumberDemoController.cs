@@ -31,7 +31,7 @@ namespace BuildNumbersInAzurePipelineArtifactsExample.Controllers
         [HttpGet]
         public IActionResult ApiInformation()
         {
-            return Ok(AssemblyInformation.InformationObject());
+            return Ok(AssemblyInfo.InformationObject());
         }
     }
 }
