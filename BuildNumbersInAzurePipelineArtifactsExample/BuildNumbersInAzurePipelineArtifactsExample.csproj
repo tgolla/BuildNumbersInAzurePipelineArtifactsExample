@@ -9,8 +9,21 @@
     <DocumentationFile>.\BuildNumbersInAzurePipelineArtifactsExample.xml</DocumentationFile>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>.\BuildNumbersInAzurePipelineArtifactsExample.xml</DocumentationFile>
+  </PropertyGroup>
+  
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="BuildNumbersInAzurePipelineArtifactsExample.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="BuildNumbersInAzurePipelineArtifactsExample.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  
 </Project>
