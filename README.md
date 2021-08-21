@@ -13,7 +13,7 @@ The process requires that you first add a task to your pipeline YAML file that o
 
 In your Azure pipeline YAML file (```azure-pipelines.yml```) you will need to add the following PowerShell task before the build task (```DotNetCoreCLI@2... Command: ‘build’```).
 
-```
+```yaml
 # Replace AzureBuildNumber.txt content with actual build number.
 - task: PowerShell@2
   inputs:
@@ -27,7 +27,7 @@ The task executes a PowerShell script that first creates (New Item) the AzureBui
 
 In your code add the following method.
 
-```
+```csharp
 public static string AzureBuildNumber
 {
     get
@@ -54,7 +54,7 @@ The method will read the AzureBuildNumber.txt file from the projects deployed ro
 
 Note: The assembly informational version is defined in the XML project file (```BuildNumbersInAzurePipelineArtifactsExample.csproj```) as part of the property group.  By default, this is not automatically added to the project file and will need to be added manually or through the project's properties tab under Package -> Package version: which must initially be changed to something other than 1.0.0.
 
-```
+```xml
 <PropertyGroup>
   <TargetFramework>netcoreapp3.1</TargetFramework>
   <Version>1.0.1</Version>
