@@ -5,7 +5,7 @@ In the process of deploying and then testing code there is always that question 
 
 In the world of the Azure DevOps pipelines the easiest way to identify the code you deploy is by the pipeline build number. 
 
-![Azure CI Build Pipeline](Azure CI Build Pipeline.png "Azure CI Build Pipeline")
+![Azure CI Build Pipeline](Azure-CI-Build-Pipeline.png "Azure CI Build Pipeline")
 
 What I’m going to talk about in the article is how you can output and then reference this build number with your deployed code.  
 
